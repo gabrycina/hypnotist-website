@@ -143,17 +143,17 @@
 		}
 
 		.hero .device-mockup {
-			animation: heroMockup .6s ease forwards 2s;
+			animation: heroMockup .6s ease forwards .6s;
 			animation-fill-mode: both;
 		}
 
 		.hero .video {
-			animation: videoMockup 2s;
+			animation: videoMockup .6s;
 			animation-fill-mode: both;
 		}
 
 		.hero .video2 {
-			animation: videoMockup 2s;
+			animation: videoMockup .6s;
 			animation-fill-mode: both;
 		}
 	}
