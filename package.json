@@ -12,7 +12,6 @@
     "url": "https://bitbucket.org/pasqualevitiello/venus/issues"
   },
   "scripts": {
-    "prestart": "next build",
     "start": "node index.js",
     "clean": "rimraf public/{css/*,js/*,images/*}",
     "autoprefixer": "postcss -u autoprefixer -r public/css/*",
