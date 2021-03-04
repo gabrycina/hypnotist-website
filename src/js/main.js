@@ -1,3 +1,12 @@
+const LazyTube = require('./LazyTube.js');
+
+(function() {
+	'use strict';
+	document.addEventListener('DOMContentLoaded', () => {
+	LazyTube.init();
+	});
+})();
+
 ( function () {
   const doc = document
   const rootEl = doc.documentElement

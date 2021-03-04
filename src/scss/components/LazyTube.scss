@@ -13,11 +13,7 @@
         height: 100% !important;
         opacity: 1 !important;
         margin: 0 !important;
-        max-width: 500px !important;
-        transition: opacity 0.5s cubic-bezier(0.4, 0, 1, 1) !important;
-        &.fadeout {
-            opacity: 0 !important;
-        }
+        max-width: 1000px !important;
     }
 
     button {

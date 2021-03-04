@@ -1,4 +1,4 @@
-export default class LazyTube {
+class LazyTube {
     static init() {
         let videos = document.querySelectorAll('.js-lazytube');
         if (videos && videos.length > 0) {
@@ -41,3 +41,5 @@ export default class LazyTube {
         this.video.appendChild(this.iframe);
     }
 }
+
+module.exports = LazyTube;
