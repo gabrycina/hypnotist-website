@@ -1,6 +1,6 @@
 .hero {
 	position: relative;
-    padding-top: 128px;
+    padding-top: 3em;
 	padding-bottom: 88px;
 	z-index: 0;
 
@@ -11,7 +11,7 @@
 		align-items: flex-end;
 		position: absolute;
 		top: 0;
-		bottom: 42%;
+		bottom: 0%;
 		left: 0;
 		right: 0;
 		background: color(bg, 1i);
@@ -341,8 +341,8 @@
 
 .gabry-hero {
 	position: relative;
-	width: 50%;
-	min-width:50%;
+	width: 30%;
+	min-width:30%;
 	max-height: 70%;
 	z-index: 2;
 	mix-blend-mode:overlay;
@@ -350,10 +350,9 @@
 }
 
 .gabry-hero2 {
-	width: 50%;
-	min-width:50%;
+	width: 30%;
+	min-width:30%;
 	min-height: 100%;
-	transform: scale(1);
 	position: relative;
 	z-index: 1;
 	mix-blend-mode:overlay;
@@ -363,10 +362,12 @@
 @media (max-width: 768px) {
 	.gabry-hero{
 		transform: scale(1.4) translate(0, -15%);
+		min-width: 45%;
 	}
 
 	.gabry-hero2{
 		transform: scale(1.4) translate(0, -15%);
+		min-width: 45%;
 	}
 }
 

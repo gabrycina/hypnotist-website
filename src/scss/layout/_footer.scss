@@ -41,6 +41,7 @@
 .site-footer-inner {
     position: relative; /* To display all elements above the background color */
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding-top: 48px;
     padding-bottom: 48px;
