@@ -1,7 +1,6 @@
 "use strict";
 const express = require('express')
 const app = express();
-var path = require('path')
 const port = process.env.port || 8000;
 
 app.use(express.static('views'))
