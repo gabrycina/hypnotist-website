@@ -57,7 +57,7 @@
 
 .hero-copy {
     position: relative; /* To display elements above hero illustrations */
-	margin-bottom: 48px;
+	margin-bottom: 1em;
 }
 
 @include media( '>medium' ) {

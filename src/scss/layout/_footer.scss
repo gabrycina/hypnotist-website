@@ -38,7 +38,7 @@
     }
 }
 
-.site-footer-inner {
+.site-footer-inner {    
     position: relative; /* To display all elements above the background color */
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@
 	}
 
     .site-footer-inner {
-        justify-content: space-between;
+        justify-content: center;
 		padding-top: 64px;
 		padding-bottom: 64px;
     }

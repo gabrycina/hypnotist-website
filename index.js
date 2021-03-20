@@ -1,15 +1,31 @@
+"use strict";
 const express = require('express')
-var path = require('path')
 const app = express();
-const port = 8000;
+var path = require('path')
+const port = process.env.port || 8000;
 
-app.use(express.static('public'))
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('views'))
+
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.sendFile('index.html', {root: __dirname })
+  //handle root
+  res.render('index');
 });
 
-app.listen(process.env.PORT || port, () => {
-  console.log(`Example app listening on port ${port}!`)
+app.get('/thankyou', (req, res) => {
+  //handle root
+  res.render('thankyou');
 });
+
+app.listen(process.env.PORT || port, err => {
+  if(err){
+    console.log("There was a problem", err);
+  }
+  console.log(`Listening on port ${port}!`);
+});
+
+
+
+
+
