@@ -289,6 +289,36 @@
 .scaled-frame2  { zoom: 1;  }
 }
 
+.scaled-frame3 {
+    width: 260px !important;
+    height: 557px !important;
+    border: 0px !important;
+}
+
+.scaled-frame3 {
+	zoom: 0.7;
+	-moz-transform: scale(0.58);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(0.58);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(0.58);
+	-webkit-transform-origin: 0 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.scaled-frame3  { zoom: 1;  }
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 52%;
+    transform: translate(-50%, 0);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
 @media (max-width: 320px) {
 	.wrapper {
 		width: 750px; 
@@ -298,7 +328,7 @@
 		position: absolute;
 		top:0;
 		z-index:0;
-		left: 50%;
+		left: 51.5%;
 		transform: translate(-45%, 2%);
 	}
 	
