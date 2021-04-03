@@ -17,6 +17,11 @@ app.get('/thankyou', (req, res) => {
   res.render('thankyou');
 });
 
+app.get('/test', (req, res) => {
+  //handle root
+  res.render('test');
+});
+
 app.listen(process.env.PORT || port, err => {
   if(err){
     console.log("There was a problem", err);
