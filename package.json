@@ -12,7 +12,8 @@
     "url": "https://bitbucket.org/pasqualevitiello/venus/issues"
   },
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
     "clean": "rimraf views/{css/*,js/*,images/*}",
     "autoprefixer": "postcss -u autoprefixer -r views/css/*",
     "scss": "node-sass --output-style compressed -o views/css src/scss",
