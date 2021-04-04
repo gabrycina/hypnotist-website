@@ -1,16 +1,9 @@
 {
-  "name": "venus",
+  "name": "gabrycina-ws",
   "version": "1.0.0",
-  "description": "Venus Template",
-  "author": "Pasquale Vitiello <pasqualevitiello@gmail.com>",
+  "description": "gabrycina website",
+  "author": "",
   "license": "GPLv3",
-  "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/pasqualevitiello/venus.git"
-  },
-  "bugs": {
-    "url": "https://bitbucket.org/pasqualevitiello/venus/issues"
-  },
   "scripts": {
     "start": "node index.js",
     "start-dev": "nodemon index.js",
@@ -54,7 +47,7 @@
     "stylelint": "^9.4.0",
     "uglify-es": "^3.3.10"
   },
-  "homepage": "https://bitbucket.org/pasqualevitiello/venus#readme",
+  "homepage": "https://gabrycina.it",
   "main": ".eslintrc.js",
   "dependencies": {
     "browserify": "^17.0.0",

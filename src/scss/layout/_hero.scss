@@ -107,7 +107,6 @@
 	.hero .device-mockup {
 		opacity: 0;
 	}
-	.hero .video,
 	.hero .video2,
 
 	&.is-loaded {
@@ -144,11 +143,6 @@
 
 		.hero .device-mockup {
 			animation: heroMockup .6s ease forwards .6s;
-			animation-fill-mode: both;
-		}
-
-		.hero .video {
-			animation: videoMockup .6s;
 			animation-fill-mode: both;
 		}
 
@@ -217,42 +211,6 @@
     height:240px;
 }
 
-.video{
-    position: absolute;
-    top:0;
-    z-index:0;
-	left: 28%;
-    transform: translate(-50%, 0);
-	animation-fill-mode: both;
-}
-
-.wrapper {
-	width: 710px; 
-	height: 1420px; 
-	padding: 0; 
-	overflow: hidden;
-	position: absolute;
-	top:0;
-	z-index:0;
-	left: 50%;
-	transform: translate(-50%, 0);
-}
-
-#scaled-frame { width: 480px; height: 1010px; border: 0px; }
-#scaled-frame {
-	zoom: 0.67;
-	-moz-transform: scale(0.67);
-	-moz-transform-origin: 0 0;
-	-o-transform: scale(0.67);
-	-o-transform-origin: 0 0;
-	-webkit-transform: scale(0.67);
-	-webkit-transform-origin: 0 0;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-#scaled-frame  { zoom: 1;  }
-}
-
 .video2{
     position: absolute;
     top:0;
@@ -260,6 +218,9 @@
 	left: 32%;
     transform: translate(-50%, 0);
 	animation-fill-mode: both;
+	-webkit-clip-path: url(#svgPath); 
+	clip-path: url(#svgPath); 
+	clip-path: view-box;
 }
 
 .wrapper-secondary{
@@ -320,25 +281,6 @@
 }
 
 @media (max-width: 320px) {
-	.wrapper {
-		width: 750px; 
-		height: 570px; 
-		padding: 0; 
-		overflow: hidden;
-		position: absolute;
-		top:0;
-		z-index:0;
-		left: 51.5%;
-		transform: translate(-45%, 2%);
-	}
-	
-	#scaled-frame { width: 540px; height: 1170px; border: 0px; }
-	#scaled-frame {
-		zoom: 0.7;
-	}
-	
-
-
 	.wrapper-secondary{
 		width: 400px; 
 		height: 570px; 
