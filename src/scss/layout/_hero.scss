@@ -35,19 +35,19 @@
 		background-repeat: no-repeat;
 	}
 
-	&::before {
-		top: 0;
-		height: 159px;
-		background-image: url('../images/hero-bg-top.svg');
-		background-size: 720px 159px;
-	}
+	// &::before {
+	// 	top: 0;
+	// 	height: 159px;
+	// 	background-image: url('../images/hero-bg-top.svg');
+	// 	background-size: 720px 159px;
+	// }
 
-	&::after {
-		bottom: 42%;
-		height: 173px;
-		background-image: url('../images/hero-bg-bottom.svg');
-		background-size: 720px 173px;
-	}
+	// &::after {
+	// 	bottom: 42%;
+	// 	height: 173px;
+	// 	background-image: url('../images/hero-bg-bottom.svg');
+	// 	background-size: 720px 173px;
+	// }
 }
 
 .hero-inner {
@@ -63,7 +63,7 @@
 @include media( '>medium' ) {
 
     .hero {
-        padding-top: 160px;
+        padding-top: 100px;
 		padding-bottom: 128px;
 
 		&::before,
@@ -353,3 +353,44 @@
 	}
 }
 
+// .arrow-down {
+// 	width: 100%;
+// 	margin: 0 auto;
+// 	text-align: center;
+// }
+
+// .arrow-down::after {
+// 	content: "";
+// 	width: 40px;
+// 	height: 40px;
+// 	position: absolute;
+// 	margin: auto;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	border-right: 4px solid #fff;
+// 	border-bottom: 4px solid #fff;
+// 	-webkit-transform: rotate(45deg);
+// 	transform: rotate(45deg);
+// 	-webkit-animation: 3s arrow infinite ease;
+// 	animation: 3s arrow infinite ease;
+// }
+
+// @-webkit-keyframes arrow {
+// 	0%, 100% {
+// 		top: 50px;
+// 	}
+// 	50% {
+// 		top: 80px;
+// 	}
+// }
+
+// @keyframes arrow {
+// 	0%, 100% {
+// 		top: 50px;
+// 	}
+// 	50% {
+// 		top: 80px;
+// 	}
+// }

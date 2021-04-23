@@ -2,18 +2,6 @@
 	position: relative;
 	background: color(bg, 1i);
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: -76px;
-		left: calc(50% - 360px);
-		width: 720px;
-		height: 291px;
-		background-image: url('../images/footer-bg.svg');
-		background-size: 720px 291px;
-		background-repeat: no-repeat;
-	}
-
 	.footer-particles-container {
 		position: absolute;
 		top: 0;
