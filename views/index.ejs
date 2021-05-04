@@ -44,18 +44,18 @@
 									4 persone su 5 sono facilmente ipnotizzabili. Non ci credi?
 								</p>
 								<div class="hero-cta">
-									<form action="https://gmail.us2.list-manage.com/subscribe/post?u=753fe3bcde160a4b095157a7d&amp;id=c054cd42e8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-										<input placeholder="il tuo nome" class="button button-wide-mobile" type="text" value="" name="FNAME" class="" id="mce-FNAME" required />
-										<input placeholder="la tua migliore mail" class="button button-wide-mobile" type="email" value="" name="EMAIL" id="mce-EMAIL" required />
+									<form class="sign-up">
+											
+										<input placeholder="il tuo nome" class="button button-wide-mobile" type="text" value="" name="MMERGE1" class="required" id="mce-MMERGE1" required>
+
+										<input placeholder="la tua migliore mail" class="button button-wide-mobile" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+										
+										<input type="hidden" value="Yes" name="GETTEST">
+
 										<div>
-											<button type="submit" class="button button-primary button-wide-mobile" href="#">
-												Ricevi il test
-											</button>
+											<button type="submit" class="button button-primary button-wide-mobile" href="#">Scoprilo Ora</button>
 										</div>
-										<div id="mce-responses" class="clear">
-											<div class="response" id="mce-error-response"></div>
-											<div class="response" id="mce-success-response"></div>
-										</div>	
+
 									</form>
 								</div>
 								<h1 class="hero-title mt-0" style="margin-top: 1em;">
@@ -226,16 +226,18 @@
 										Scopri quanto sei ipnotizzabile in pochi secondi.
 									</p>
 									<div class="hero-cta">
-										<form action="https://gmail.us2.list-manage.com/subscribe/post?u=753fe3bcde160a4b095157a7d&amp;id=c054cd42e8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-											<input placeholder="il tuo nome" class="button button-wide-mobile" type="text" value="" name="FNAME" class="" id="mce-FNAME" required>
-											<input placeholder="la tua migliore mail" class="button button-wide-mobile" type="email" value="" name="EMAIL" id="mce-EMAIL" required>
+										<form class="sign-up">
+											
+											<input placeholder="il tuo nome" class="button button-wide-mobile" type="text" value="" name="MMERGE1" class="required" id="mce-MMERGE1" required>
+
+											<input placeholder="la tua migliore mail" class="button button-wide-mobile" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+											
+											<input type="hidden" value="Yes" name="GETTEST">
+
 											<div>
 												<button type="submit" class="button button-primary button-wide-mobile" href="#">Scoprilo Ora</button>
 											</div>
-											<div id="mce-responses" class="clear">
-												<div class="response" id="mce-error-response"></div>
-												<div class="response" id="mce-success-response"></div>
-											</div>	
+	
 										</form>
 									</div>
 									<p class="hero-paragraph" style="margin-top: 1.5em;">
@@ -278,6 +280,32 @@
 				</div>
 			</footer>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$('form.sign-up').on('submit',function(e) {
+				// Highjack the submit button, we will do it ourselves
+				e.preventDefault();
+				// uncomment next line & check console to see if button works
+				console.log('submit button worked!');
+
+				// store all the form data in a variable
+				var formData = JSON.stringify($(this).serializeArray());
+
+				console.log(formData);
+
+				$.ajax({
+					type:'POST',
+					data: formData, //input data to be sent to the server
+                    contentType: 'application/json',
+                    url: 'http://localhost:80/endpoint',                        
+                    success: function(data, textStatus, jqXHR) {
+						if (typeof(data.redirect) == 'string')
+							window.location = data.redirect
+						}
+					}
+				)
+			});
+		</script>
 		<script src="/js/bundle.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 		<script src="/js/scrollIt.min.js"></script>
