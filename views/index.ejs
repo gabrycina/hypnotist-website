@@ -297,7 +297,7 @@
 					type:'POST',
 					data: formData, //input data to be sent to the server
                     contentType: 'application/json',
-                    url: 'http://localhost/endpoint',                        
+                    url: 'https://gabrycina-ws.herokuapp.com/endpoint',                        
                     success: function(data, textStatus, jqXHR) {
 						if (typeof(data.redirect) == 'string')
 							window.location = data.redirect
